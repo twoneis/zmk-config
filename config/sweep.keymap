@@ -5,19 +5,80 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define U_MOD &mt LSHFT U
+#define E_MOD &mt LCTRL E
+
+#define H_MOD &mt LSHFT H
+#define T_MOD &mt LCTRL T
+
+#define VOL_UP &kp C_VOL_UP
+#define VOL_DN &kp C_VOL_DN
+
+#define BRI_UP &kp C_BRI_UP
+#define BRI_DN &kp C_BRI_DN
+
+#define RP_MOD &mt LSHFT RPAR
+#define LP_MOD &mt LCTRL LPAR
+
+#define N4_MOD &mt LSHFT N4
+#define N5_MOD &mt LCTRL N5
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &kp A      &kp A      &kp A      &kp A      &kp A          &kp A      &kp A      &kp A      &kp A      &kp A
+            &kp SEMI  &kp COMMA  &kp COLON    &kp P      &kp Z          &kp F      &kp G      &kp C      &kp R      &kp L    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp A      &kp A      &kp A      &kp A      &kp A          &kp A      &kp A      &kp A      &kp A      &kp A
+             &kp A      &kp O      E_MOD      U_MOD      &kp I          &kp D      H_MOD      T_MOD      &kp N      &kp S    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp A      &kp A      &kp A      &kp A      &kp A          &kp A      &kp A      &kp A      &kp A      &kp A
+            &kp TAB     &kp Q      &kp J      &kp K      &kp X          &kp B      &kp M      &kp W      &kp V      &kp Y    
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp A      &kp A          &kp A      &kp A
+                                             &kp LGUI   &kp ESC       &kp SPACE    &to 1    
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        symbol_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+             VOL_UP     VOL_DN     BRI_UP     BRI_DN   &caps_word     &kp MINUS    &kp N1     &kp N2     &kp N3    &kp BSPC  
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            &kp BSLH   &kp FSLH    LP_MOD     RP_MOD    &kp SQT       &kp EQUAL    N4_MOD     N5_MOD     &kp N6     &kp N0   
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+             &trans     &trans    &kp LBKT   &kp RBKT   &kp RALT        &trans     &kp N7     &kp N8     &kp N9    &kp RET   
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                              &trans    &kp RALT        &to 2      &to 1    
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans   
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans   
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans   
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                              &trans     &trans         &trans     &trans   
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        game_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans   
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans   
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans   
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                              &trans     &trans         &trans     &trans   
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
