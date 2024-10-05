@@ -58,13 +58,13 @@
         nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans   
+              &F1        &F2        &F3        &F4        &F5           &trans     &trans     &trans     &trans     &BSPC    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans   
+              &F6        &F7        &F8        &F9        &F10          &trans     &LEFT       &UP       &DOWN      &RIGHT   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans   
+              &F11       &F12       &F13       &F14       &F15         &trans     &trans     &trans     &trans     &kp RET   
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &trans     &trans         &trans     &trans   
+                                              &trans     &trans         &to 3      &to 1    
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
