@@ -8,8 +8,8 @@
 #define U_MOD &mt LSHFT U
 #define E_MOD &mt LCTRL E
 
-#define H_MOD &mt LSHFT H
-#define T_MOD &mt LCTRL T
+#define H_MOD &mt RSHFT H
+#define T_MOD &mt RCTRL T
 
 #define VOL_UP &kp C_VOL_UP
 #define VOL_DN &kp C_VOL_DN
@@ -20,8 +20,8 @@
 #define RP_MOD &mt LSHFT RPAR
 #define LP_MOD &mt LCTRL LPAR
 
-#define N4_MOD &mt LSHFT N4
-#define N5_MOD &mt LCTRL N5
+#define N4_MOD &mt RSHFT N4
+#define N5_MOD &mt RCTRL N5
 
 
 / {
@@ -58,9 +58,9 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp BSLH   &kp FSLH    LP_MOD     RP_MOD    &kp SQT       &kp EQUAL    N4_MOD     N5_MOD     &kp N6     &kp N0   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-             &none      &none     &kp LBKT   &kp RBKT   &kp RALT        &none      &kp N7     &kp N8     &kp N9    &kp RET   
+            &kp TAB   &kp C_MUTE  &kp LBKT   &kp RBKT   &kp RALT       &kp PLUS    &kp N7     &kp N8     &kp N9    &kp RET   
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LGUI   &kp RALT        &none     &lht 0 2  
+                                             &kp LGUI   &kp RALT      &kp SPACE   &lht 0 2  
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -68,13 +68,13 @@
         nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-              &F1        &F2        &F3        &F4        &F5           &none      &none      &none      &none      &BSPC    
+             &kp F1     &kp F2     &kp F3     &kp F4     &kp F5        &kp HOME   &kp END   &kp PG_UP  &kp PG_DN   &kp BSPC  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-              &F6        &F7        &F8        &F9        &F10          &none      &LEFT       &UP       &DOWN      &RIGHT   
+             &kp F6     &kp F7     &kp F8     &kp F9    &kp F10         &none     &kp LEFT    &kp UP    &kp DOWN  &kp RIGHT  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-              &F11       &F12       &F13       &F14       &F15          &none      &none      &none      &none      &kp RET  
+            &kp F11    &kp F12    &kp F13    &kp F14    &kp F15         &none      &none      &none      &none      &kp RET  
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &none      &none          &none     &lht 0 3  
+                                             &kp LGUI    &none        &kp SPACE   &lht 0 3  
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -82,13 +82,13 @@
         game_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-             &ESC       &kp Q      &kp R      &kp T      &kp G          &none      &none      &none      &none      &none    
+            &xp TAB     &kp Q      &kp R      &kp T      &kp Y          &kp U      &kp I      &kp O      &kp P     &kp BSPC  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp LSHFT    &kp A      &kp W      &kp D      &kp F          &none      &none      &none      &none      &none    
+           &kp LSHFT    &kp A      &kp W      &kp D      &kp F          &kp G      &kp H      &kp J      &kp K      &kp L    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp LCTRL    &kp Z      &kp S      &kp C      &kp V          &none      &none      &none      &none      &none    
+           &kp LCTRL    &kp Z      &kp S      &kp X      &kp C          &kp V      &kp B      &kp N      &kp M     &kp RET   
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &xp ESC   &kp SPACE        &none      &to 0    
+                                             &xp ESC   &kp SPACE      &kp SPACE    &to 0    
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
