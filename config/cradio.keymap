@@ -24,7 +24,7 @@
 
         combo_lh {
             timeout-ms = <200>;
-            key-positions = <33 34>;
+            key-positions = <32 33>;
             bindings = <&to 0>;
         };
 
@@ -36,14 +36,14 @@
 
        combo_bspc{
             timeout-ms = <200>;
-            key-positions = <10 20>;
+            key-positions = <9 19>;
             layers = <0>;
             bindings = <&kp BSPC>;
        };
 
        combo_enter{
             timeout-ms = <200>;
-            key-positions = <20 30>;
+            key-positions = <19 29>;
             layers = <0>;
             bindings = <&kp RET>;
        };
