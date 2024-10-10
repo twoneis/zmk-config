@@ -26,27 +26,27 @@
             timeout-ms = <200>;
             key-positions = <33 34>;
             bindings = <&to 0>;
-        }
+        };
 
        combo_bt_clr {
             timeout-ms = <200>;
             key-positions = <26 27 28>;
             bindings = <&bt BT_CLR>;
-       }
+       };
 
        combo_bspc{
             timeout-ms = <200>;
             key-positions = <10 20>;
             layers = <0>;
             bindings = <&kp BSPC>;
-       }
+       };
 
        combo_enter{
             timeout-ms = <200>;
             key-positions = <20 30>;
             layers = <0>;
             bindings = <&kp RET>;
-       }
+       };
     }
 
     keymap {
