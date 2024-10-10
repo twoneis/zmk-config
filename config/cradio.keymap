@@ -47,7 +47,7 @@
             layers = <0>;
             bindings = <&kp RET>;
        };
-    }
+    };
 
     keymap {
         compatible = "zmk,keymap";
