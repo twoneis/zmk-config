@@ -8,6 +8,12 @@
 
 / {
     behaviors {
+        grtesc: grave_escape_with_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
+            mods = <MOD_LGUI>;
+        };
         hrm: home_row_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -61,7 +67,7 @@
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
            &kp TAB        &kp Q          &kp J          &kp K          &kp X              &kp B          &kp M          &kp W          &kp V          &kp Y          
         //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                        &kp LGUI       &gresc             &kp SPACE      &to 1          
+                                                        &kp LGUI       &grtesc             &kp SPACE      &to 1          
         //                                             ╰──────────────┴──────────────╯   ╰──────────────┴──────────────╯
             >;
         };
