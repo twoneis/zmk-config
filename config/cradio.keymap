@@ -78,7 +78,7 @@
 
 		combo_down {
 			timeout-ms = <200>;
-			key-positions = <13 23>;
+			key-positions = <12 22>;
 			layers = <0>;
 			bindings = <&kp DOWN>;
 		};
