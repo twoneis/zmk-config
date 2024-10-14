@@ -41,18 +41,47 @@
 			bindings = <&bt BT_CLR>;
 		};
 
-		combo_bspc{
+		combo_bspc {
 			timeout-ms = <200>;
 			key-positions = <9 19>;
 			layers = <0>;
 			bindings = <&kp BSPC>;
 		};
 
-		combo_enter{
+		combo_enter {
 			timeout-ms = <200>;
 			key-positions = <19 29>;
 			layers = <0>;
 			bindings = <&kp RET>;
+		};
+
+		combo_left {
+			timeout-ms = <200>;
+			key-positions = <6 16>;
+			layers = <0>;
+			bindings = <&kp LEFT>;
+		};
+
+		combo_up {
+			timeout-ms = <200>;
+			key-positions = <7 17>;
+			layers = <0>;
+			bindings = <&kp UP>;
+		};
+
+		combo_down {
+			timeout-ms = <200>;
+			key-positions = <18 28>;
+			layers = <0>;
+			bindings = <&kp DOWN>;
+		};
+
+
+		combo_right {
+			timeout-ms = <200>;
+			key-positions = <19 29>;
+			layers = <0>;
+			bindings = <&kp RIGHT>;
 		};
 	};
 
@@ -79,7 +108,7 @@
 					//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
 					   &kp BSLH       &kp FSLH      &hrm LCTRL LPAR &hrm LSHFT RPAR &kp SQT           &kp EQUAL      &hrm RSHFT N4  &hrm RCTRL N5  &kp N6         &kp N0         
 					//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-					   &kp TAB        &kp C_MUTE     &kp LBKT       &kp RBKT       &kp RALT           &kp PLUS       &kp N7         &kp N8         &kp N9         &kp RET        
+					   &kp TAB        &kp C_MUTE     &kp LBKT       &kp RBKT       &kp LALT           &kp PLUS       &kp N7         &kp N8         &kp N9         &kp RET        
 					//╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
 					                                                &kp LGUI       &kp RALT           &kp SPACE      &to 2          
 					//                                             ╰──────────────┴──────────────╯   ╰──────────────┴──────────────╯
