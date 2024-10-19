@@ -5,7 +5,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-
 / {
 	behaviors {
 		grtesc: grave_escape_with_tilde {
@@ -83,7 +82,54 @@
 			bindings = <&kp DOWN>;
 		};
 
+		combo_minus {
+			timeout-ms = <200>;
+			key-positions = <5 15>;
+			layers = <0>;
+			bindings = <&kp MINUS>;
+		};
 
+		combo_equal {
+			timeout-ms = <200>;
+			key-positions = <15 25>;
+			layers = <0>;
+			bindings = <&kp EQUAL>;
+		}
+
+		combo_quote {
+			timeout-ms = <200>;
+			key-positions = <13 14>;
+			layers = <0>;
+			bindings = <&kp SQT>;
+		}
+
+		combo_lpar {
+			timeout-ms = <200>;
+			key-positions = <12 22>;
+			layers = <0>;
+			bindings = <&kp LPAR>;
+		}
+
+		combo_rpar {
+			timeout-ms = <200>;
+			key-positions = <13 23>;
+			layers = <0>;
+			bindings = <&kp RPAR>;
+		}
+
+		combo_lbkt {
+			timeout-ms = <200>;
+			key-positions = <11 21>;
+			layers = <0>;
+			bindings = <&kp LBKT>;
+		}
+
+		combo_rbkt {
+			timeout-ms = <200>;
+			key-positions = <14 24>;
+			layers = <0>;
+			bindings = <&kp RBKT>;
+		}
 	};
 
 	keymap {
